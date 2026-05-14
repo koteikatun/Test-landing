@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Клуб четырех коней</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz@0,18..144;1,18..144&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="headers">
+      <div class="logo">
+        <img
+          src="./assets/images/hero_bg.svg"
+          alt="Логотип клуба четырех коней"
+          class="logo__img"
+        />
+        <div class="logo__text">
+          <span class="logo__line">КЛУБ</span>
+          <span class="logo__line">ЧЕТЫРЕХ КОНЕЙ</span>
+        </div>
+      </div>
+      <div class="header__container">
+        <h1 class="header_content-title">
+          <span class="title-line-left">Превратите</span>
+          <span class="title-line-left">уездный город</span>
+          <span class="title-line-center">в столицу</span>
+          <span class="title-line-end">земного шара</span>
+        </h1>
+        <p class="header_content-description">
+          Оплатите взнос на телеграммы для организации Международного
+          васюкинского турнира по шахматам
+        </p>
+        <div class="hero-content__buttons">
+          <button
+            class="btn btn--primary btn-anchor"
+            data-target="participants"
+          >
+            Поддержать шахматную мысль
+          </button>
+          <button class="btn btn--secondary btn-anchor" data-target="stages">
+            Подробнее о турнире
+          </button>
+        </div>
+      </div>
+
+      <!-- Декоративные элементы (круг с текстом) -->
+      <div class="ellipse-layer">
+        <img src="./assets/images/Ellipse 6.svg" alt="" class="ellipse-img" />
+        <div class="rotating-text">
+          <svg viewBox="0 0 660 660">
+            <path
+              id="textPath"
+              d="M 330,330 m -300,0 a 300,300 0 1,1 600,0 a 300,300 0 1,1 -600,0"
+              fill="none"
+            />
+            <text
+              font-size="18"
+              fill="#313131"
+              font-family="'Golos Text', sans-serif"
+              font-weight="100"
+              letter-spacing="-0.9px"
+            >
+              <textPath href="#textPath" startOffset="1.75%">
+                ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ
+                НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ
+                ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС ·
+              </textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="overlay-images">
+        <img
+          src="./assets/images/queen.svg"
+          alt=""
+          class="overlay-image-chess--queen"
+        />
+        <img
+          src="./assets/images/chess.svg"
+          alt=""
+          class="overlay-image-chess--chess"
+        />
+        <img src="./assets/images/city.png" alt="" class="overlay-images--1" />
+        <img
+          src="./assets/images/white_city.png"
+          alt=""
+          class="overlay-images--2"
+        />
+        <img
+          src="./assets/images/chess2.svg"
+          alt=""
+          class="overlay-image-chess--chess2"
+        />
+
+        <img
+          src="./assets/images/horse_top.svg"
+          alt=""
+          class="overlay-image-chess--horse"
+        />
+      </div>
+    </header>
+
+    <!-- Бегущая строка -->
+    <div class="marquee">
+      <div class="marquee__inner">
+        <span class="marquee__text"
+          >Дело помощи утопающим — дело рук самих утопающих!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Шахматы двигают вперед не только культуру, но и экономику!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Лед тронулся, господа присяжные заседатели!
+        </span>
+        <span class="marquee__separator">•</span>
+      </div>
+    </div>
+
+    <!-- Остальной контент (временный для проверки) -->
+    <main style="height: 50vh; padding: 20px">
+      <p>Остальной контент страницы (участники, этапы...)</p>
+    </main>
+
+    <section class="section_player">
+      <div class="section_player__header">
+        <h1 class="section_player__title">Участники турнира</h1>
+        <div class="section_player__button-controls">
+          <button
+            class="section_player__button section_player__button--left"
+          ></button>
+          <span class="carousel-counter">
+            <span class="carousel-counter__current">1</span>
+            <span>/</span>
+            <span class="carousel-counter__total">6</span>
+          </span>
+          <button
+            class="section_player__button section_player__button--right"
+          ></button>
+        </div>
+      </div>
+      <div class="participants-carousel">
+        <div class="participants-track">
+          <!-- Карточки участников (все 6) -->
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Хозе-Рауль Капабланка</h3>
+            <p class="participant-card__desc">Чемпион мира по шахматам</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Эммануил Ласкер</h3>
+            <p class="participant-card__desc">Чемпион мира по шахматам</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Александр Алехин</h3>
+            <p class="participant-card__desc">Чемпион мира по шахматам</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Арон Нимцович</h3>
+            <p class="participant-card__desc">Чемпион мира по шахматам</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Рихард Рети</h3>
+            <p class="participant-card__desc">Чемпион мира по шахматам</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+          <div class="participant-card">
+            <div class="participant-card__avatar">
+              <img src="./assets/images/man_player.svg" alt="Фото участника" />
+            </div>
+            <h3 class="participant-card__name">Остап Бендер</h3>
+            <p class="participant-card__desc">Гроссмейстер</p>
+            <button class="participant-card__btn">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- Бегущая строка -->
+      <div class="marquee">
+        <div class="marquee__inner">
+          <span class="marquee__text"
+            >Дело помощи утопающим — дело рук самих утопающих!
+          </span>
+          <span class="marquee__separator">•</span>
+          <span class="marquee__text"
+            >Шахматы двигают вперед не только культуру, но и экономику!
+          </span>
+          <span class="marquee__separator">•</span>
+          <span class="marquee__text"
+            >Лед тронулся, господа присяжные заседатели!
+          </span>
+          <span class="marquee__separator">•</span>
+        </div>
+      </div>
+      <div class="footer_content">
+        <span class="footer_content-text">
+          Все персонажи, события и цитаты являются вымышленными и не принадлежат
+          создателям сайта. С подробностями можно познакомиться в главе XXXIV
+          романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+        </span>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/participants-carousel.js"></script>
+  </body>
+</html>
