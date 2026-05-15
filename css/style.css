@@ -338,6 +338,190 @@ body {
   animation-play-state: paused;
 }
 
+.section_stages {
+  padding: 0 72px 200px 72px;
+}
+
+.section_stages__general-line {
+  display: flex;
+  margin-bottom: 64px;
+}
+
+.section_stages__title {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.2;
+  color: #313131;
+  text-transform: uppercase;
+}
+
+.section_stages__description {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #3057a2;
+  width: 280px;
+  height: 38px;
+  margin: 8px 0 9px 26px;
+}
+
+/* Грид: 3 колонки по 394px, 3 строки с автоматической высотой (задаётся через min-height карточек) */
+.section_stages__grid {
+  display: grid;
+  grid-template-columns: 394px 394px 394px;
+  grid-auto-rows: auto;
+  gap: 20px; /* gutter между всеми ячейками */
+  justify-content: center;
+}
+
+/* Общие стили карточек */
+.stage-card {
+  padding: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  box-sizing: border-box;
+  position: relative; /* чтобы круг позиционировался внутри */
+  padding: 20px 20px 20px 72px; /* отступ слева: 20px (край карточки) + 36px (ширина круга) + 20px (расстояние от круга до текста) = 76px */
+  /* Можно верхний отступ оставить 20px, но чтобы текст не наезжал на круг, достаточно левого отступа */
+  min-height: 112px; /* или другие высоты, заданные ранее */
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.stage-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/Paper.svg");
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stage-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/hero_bg.png");
+  background-size: contain;
+  width: 100%;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.stage-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.stage-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  background: #fff; /* цвет фона круга – белый, можно изменить под макет */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+/* ----- Позиционирование карточек ----- */
+/* 1-й столбец – каждая карточка занимает свою строку */
+.stage-card--1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.stage-card--2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.stage-card--3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* 2-й столбец – карточки 4 и 5 в строках 1 и 2 */
+.stage-card--4 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.stage-card--5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Карточка 6: объединяет 2-й и 3-й столбцы в 3-й строке */
+.stage-card--6 {
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  overflow: visible;
+}
+
+.stage-card__fly {
+  position: absolute;
+  right: -59px;
+  top: -92px;
+  width: 376px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Карточка 7: объединяет строки 1 и 2 в 3-м столбце */
+.stage-card--7 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+/* ----- Высоты карточек (min-height, чтобы контент не обрезался) ----- */
+.stage-card--1,
+.stage-card--4 {
+  height: 112px;
+}
+.stage-card--2,
+.stage-card--5 {
+  min-height: 112px;
+}
+.stage-card--3,
+.stage-card--6 {
+  min-height: 136px;
+}
+.stage-card--7 {
+  min-height: 244px;
+}
+
+.stage-card--1 span,
+.stage-card--2 span,
+.stage-card--3 span,
+.stage-card--4 span,
+.stage-card--5 span {
+  display: inline-block;
+  width: 302px;
+}
+
+.stage-card--6 span {
+  display: inline-block;
+  width: 411px;
+}
+
+.stage-card--7 span {
+  display: inline-block;
+  width: 289px;
+}
+
+/* Участники турнира */
+
 .section_player {
   padding: 0 72px 140px 72px;
 }
@@ -498,6 +682,8 @@ body {
   background: #1f1f1f;
   color: white;
 }
+
+/* Футер */
 
 .footer_content {
   background-color: var(--color-bg-second);

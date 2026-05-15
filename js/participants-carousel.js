@@ -6,7 +6,6 @@
   const totalOriginal = originalCards.length;
   if (totalOriginal === 0) return;
 
-  const visibleCount = 3;
   const cloneCount = totalOriginal;
   let currentOffset = cloneCount;
   let autoplayInterval = null;
@@ -66,12 +65,26 @@
   }
 
   function updateCounter() {
+    // Определяем, сколько карточек видно одновременно (зависит от ширины экрана)
+    const trackWidth = track.offsetWidth;
+    const cardWidth = allCards[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    let visibleCards = Math.round(trackWidth / (cardWidth + gap));
+    // На случай погрешности округления
+    if (visibleCards < 1) visibleCards = 1;
+
+    // Индекс первой видимой карточки (в оригинальной нумерации)
     let rawIndex = currentOffset - cloneCount;
     if (rawIndex < 0) rawIndex += totalOriginal;
     if (rawIndex >= totalOriginal) rawIndex -= totalOriginal;
-    const currentOriginal = rawIndex + 1;
+
+    // Индекс последней видимой карточки
+    let lastVisibleIndex = rawIndex + visibleCards - 1;
+    if (lastVisibleIndex >= totalOriginal) lastVisibleIndex -= totalOriginal; // для зацикленности
+
+    // Показываем номер последней видимой (1-индексация)
     const counterSpan = document.querySelector(".carousel-counter__current");
-    if (counterSpan) counterSpan.innerText = currentOriginal;
+    if (counterSpan) counterSpan.innerText = lastVisibleIndex + 1;
 
     const totalSpan = document.querySelector(".carousel-counter__total");
     if (totalSpan) totalSpan.innerText = totalOriginal;
