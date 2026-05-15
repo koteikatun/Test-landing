@@ -59,31 +59,7 @@
       </div>
 
       <!-- Декоративные элементы (круг с текстом) -->
-      <div class="ellipse-layer">
-        <img src="./assets/images/Ellipse 6.svg" alt="" class="ellipse-img" />
-        <div class="rotating-text">
-          <svg viewBox="0 0 660 660">
-            <path
-              id="textPath"
-              d="M 330,330 m -300,0 a 300,300 0 1,1 600,0 a 300,300 0 1,1 -600,0"
-              fill="none"
-            />
-            <text
-              font-size="18"
-              fill="#313131"
-              font-family="'Golos Text', sans-serif"
-              font-weight="100"
-              letter-spacing="-0.9px"
-            >
-              <textPath href="#textPath" startOffset="1.75%">
-                ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ
-                НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ
-                ПОЛЕТЯТ СИГНАЛЫ НА МАРС · ИЗ ВАСЮКОВ ПОЛЕТЯТ СИГНАЛЫ НА МАРС ·
-              </textPath>
-            </text>
-          </svg>
-        </div>
-      </div>
+      <img src="/assets/images/Ellipse_text.svg" alt="" class="rotating-text" />
 
       <div class="overlay-images">
         <img
@@ -131,12 +107,78 @@
           >Лед тронулся, господа присяжные заседатели!
         </span>
         <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Дело помощи утопающим — дело рук самих утопающих!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Шахматы двигают вперед не только культуру, но и экономику!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Лед тронулся, господа присяжные заседатели!
+        </span>
+        <span class="marquee__separator">•</span>
       </div>
     </div>
 
     <!-- Остальной контент (временный для проверки) -->
-    <main style="height: 50vh; padding: 20px">
-      <p>Остальной контент страницы (участники, этапы...)</p>
+    <main class="main-content">
+      <div class="section_lecture--title">
+        <div class="section_lecture--text">
+          <span class="black">
+            Чтобы поддержать Международный васюкинский турнир посетите лекцию на
+            тему:
+          </span>
+          <span class="red">«Плодотворная дебютная идея»</span>
+        </div>
+        <div class="mask-group">
+          <img src="assets/images/mans_play.svg" alt="Иллюстрация к лекции" />
+        </div>
+      </div>
+
+      <div class="section_lecture--title-second">
+        <div class="mask-group second-picture">
+          <img
+            src="assets/images/one_man_play.png"
+            alt="Один мужчина играет в шахматы"
+          />
+        </div>
+        <div class="section_lecture__table-container">
+          <div class="section_lecture--text second-title">
+            <span class="black"> и Сеанс </span>
+            <span class="red">одновременной игры в шахматы на 160 досках</span>
+            <span class="black">гроссмейстера О. Бендера</span>
+          </div>
+          <table class="schedule-table">
+            <tr>
+              <td class="name_table">Место проведения:</td>
+              <td class="value_table">Клуб «Картонажник»</td>
+            </tr>
+            <tr>
+              <td class="name_table">Дата и время мероприятия:</td>
+              <td class="value_table">22 июня 1927 г. в 18:00</td>
+            </tr>
+            <tr>
+              <td class="name_table">Стоимость входных билетов:</td>
+              <td class="value_table">20 коп.</td>
+            </tr>
+            <tr>
+              <td class="name_table">Плата за игру:</td>
+              <td class="value_table">50 коп.</td>
+            </tr>
+            <tr>
+              <td class="name_table">Взнос на телеграммы:</td>
+              <td class="value_table">
+                <span class="old-price">100 руб.</span>21 руб. 16 коп.
+              </td>
+            </tr>
+          </table>
+          <div class="schedule-text">
+            По всем вопросам обращаться в администрацию к К. Михельсону
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Этапы -->
@@ -160,15 +202,19 @@
         </div>
         <div class="stage-card stage-card--3">
           <div class="stage-number">6</div>
-          <span>Постройка сверхмощной радиостанции для передачи всему миру
-          сенсационных результатов</span>
+          <span
+            >Постройка сверхмощной радиостанции для передачи всему миру
+            сенсационных результатов</span
+          >
         </div>
 
         <!-- 2-й столбец -->
         <div class="stage-card stage-card--4">
           <div class="stage-number">2</div>
-          <span>Открытие фешенебельной гостиницы «Проходная пешка» и других
-          небоскрёбов</span>
+          <span
+            >Открытие фешенебельной гостиницы «Проходная пешка» и других
+            небоскрёбов</span
+          >
         </div>
         <div class="stage-card stage-card--5">
           <div class="stage-number">5</div>
@@ -176,17 +222,21 @@
         </div>
         <div class="stage-card stage-card--6">
           <div class="stage-number">7</div>
-          <span>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых
-          самолётов и дирижаблей во все концы света, включая Лос-Анжелос и
-          Мельбурн</span>
-          <img class="stage-card__fly" src="assets/images/fly.svg" alt="">
+          <span
+            >Создание аэропорта «Большие Васюки» с регулярным отправлением
+            почтовых самолётов и дирижаблей во все концы света, включая
+            Лос-Анжелос и Мельбурн</span
+          >
+          <img class="stage-card__fly" src="assets/images/fly.svg" alt="" />
         </div>
 
         <!-- 3-й столбец -->
         <div class="stage-card stage-card--7">
           <div class="stage-number">3</div>
-          <span>Поднятие сельского хозяйства в радиусе на тысячу километров:
-          производство овощей, фруктов, икры, шоколадных конфет</span>
+          <span
+            >Поднятие сельского хозяйства в радиусе на тысячу километров:
+            производство овощей, фруктов, икры, шоколадных конфет</span
+          >
         </div>
       </div>
     </section>
@@ -264,25 +314,37 @@
       </div>
     </section>
 
+    <!-- Бегущая строка перед footer -->
+    <div class="marquee">
+      <div class="marquee__inner">
+        <span class="marquee__text"
+          >Дело помощи утопающим — дело рук самих утопающих!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Шахматы двигают вперед не только культуру, но и экономику!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Лед тронулся, господа присяжные заседатели!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Дело помощи утопающим — дело рук самих утопающих!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Шахматы двигают вперед не только культуру, но и экономику!
+        </span>
+        <span class="marquee__separator">•</span>
+        <span class="marquee__text"
+          >Лед тронулся, господа присяжные заседатели!
+        </span>
+        <span class="marquee__separator">•</span>
+      </div>
+    </div>
     <!-- Футер -->
     <footer>
-      <!-- Бегущая строка -->
-      <div class="marquee">
-        <div class="marquee__inner">
-          <span class="marquee__text"
-            >Дело помощи утопающим — дело рук самих утопающих!
-          </span>
-          <span class="marquee__separator">•</span>
-          <span class="marquee__text"
-            >Шахматы двигают вперед не только культуру, но и экономику!
-          </span>
-          <span class="marquee__separator">•</span>
-          <span class="marquee__text"
-            >Лед тронулся, господа присяжные заседатели!
-          </span>
-          <span class="marquee__separator">•</span>
-        </div>
-      </div>
       <div class="footer_content">
         <span class="footer_content-text">
           Все персонажи, события и цитаты являются вымышленными и не принадлежат
