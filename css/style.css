@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 /* ---------- ПЕРЕМЕННЫЕ (для адаптации) ---------- */
 :root {
   --color-bg-pimary: #ffffff;
@@ -63,7 +72,6 @@ body {
   align-items: end; /* вертикальное выравнивание картинки и текстового блока */
   gap: 6.35px; /* расстояние между картинкой и текстом (из макета) */
   max-width: 245px; /* ограничиваем ширину всего блока */
-  white-space: normal; /* разрешаем перенос текста */
   height: 36px;
   z-index: 3;
   margin: 26px 0 0 72px;
@@ -199,6 +207,7 @@ body {
   position: absolute;
   left: 729.18px;
   z-index: 1;
+  max-width: none;
 }
 
 .overlay-image-chess--chess {
@@ -206,6 +215,7 @@ body {
   left: 1061.45px;
   top: -105px;
   z-index: 1;
+  max-width: none;
 }
 
 .overlay-image-chess--chess2 {
@@ -213,12 +223,14 @@ body {
   left: 1239px;
   top: 289px;
   z-index: 3;
+  max-width: none;
 }
 
 .overlay-images--1 {
   position: absolute;
   left: -116.5px;
   z-index: 1;
+  max-width: none;
 }
 
 .overlay-images--2 {
@@ -226,6 +238,7 @@ body {
   top: -11px;
   left: -120px;
   z-index: 1;
+  max-width: none;
 }
 
 .overlay-image-chess--horse {
@@ -233,6 +246,7 @@ body {
   top: 212px;
   left: 835.64px;
   z-index: 5;
+  max-width: none;
 }
 
 .text-group {
@@ -252,6 +266,7 @@ body {
   z-index: 1;
   left: 615px;
   top: -105px;
+  max-width: none;
 }
 
 .rotating-text svg {
@@ -269,7 +284,8 @@ body {
 }
 
 /* Бегущая строка */
-.marquee {
+.marquee,
+.marquee-footer {
   overflow: hidden;
   background: #f54932;
   color: #fff;
@@ -310,6 +326,17 @@ body {
 /* Остановка анимации при наведении (опционально) */
 .marquee:hover .marquee__inner {
   animation-play-state: paused;
+}
+
+.img-chess {
+  width: 394px;
+  height: 250px;
+}
+
+.mask-group.img-chess img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section_stages {
@@ -492,6 +519,16 @@ body {
 .stage-card--7 span {
   display: inline-block;
   width: 289px;
+}
+
+.stages-carousel {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .stages-carousel {
+    display: block;
+  }
 }
 
 /* Участники турнира */
@@ -689,6 +726,12 @@ body {
 .mask-group {
   position: relative;
   display: inline-block;
+  max-width: 100%;
+}
+
+.mask-group img {
+  max-width: 100%;
+  height: auto;
 }
 
 .mask-group::after {
@@ -713,11 +756,23 @@ body {
   align-items: center;
 }
 
-.section_lecture--text {
+.section_lecture--text,
+.section_lecture--text,
+.lecture-text-wrap {
   font-family: var(--font-title);
   font-size: 36px;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.lecture-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture-text-wrap .part1 span,
+.lecture-text-wrap .part2-group span {
+  display: block;
 }
 
 .section_lecture--title-second {
