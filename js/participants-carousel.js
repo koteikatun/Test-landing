@@ -22,12 +22,12 @@
 
   updateCarousel(false);
 
-  function updateCarousel(animate) {
-    if (animate === undefined) animate = true;
+  function updateCarousel(animate = true) {
     const cardWidth = allCards[0].offsetWidth;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     const slideWidth = cardWidth + gap;
     const newPosition = -currentOffset * slideWidth;
+
     track.style.transition = animate ? "transform 0.4s ease" : "none";
     track.style.transform = `translateX(${newPosition}px)`;
     updateCounter();
@@ -39,11 +39,11 @@
 
     if (currentOffset >= cloneCount + totalOriginal) {
       currentOffset = cloneCount;
-      updateCarousel(false);
     } else if (currentOffset < cloneCount) {
       currentOffset = totalOriginal + currentOffset;
-      updateCarousel(false);
     }
+
+    updateCarousel(false);
     isTransitioning = false;
   }
 
@@ -60,46 +60,45 @@
   function nextSlide() {
     goToSlide(1);
   }
+
   function prevSlide() {
     goToSlide(-1);
   }
 
   function updateCounter() {
-    // Определяем, сколько карточек видно одновременно (зависит от ширины экрана)
     const trackWidth = track.offsetWidth;
     const cardWidth = allCards[0].offsetWidth;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     let visibleCards = Math.round(trackWidth / (cardWidth + gap));
-    // На случай погрешности округления
+
     if (visibleCards < 1) visibleCards = 1;
 
-    // Индекс первой видимой карточки (в оригинальной нумерации)
     let rawIndex = currentOffset - cloneCount;
     if (rawIndex < 0) rawIndex += totalOriginal;
     if (rawIndex >= totalOriginal) rawIndex -= totalOriginal;
 
-    // Индекс последней видимой карточки
     let lastVisibleIndex = rawIndex + visibleCards - 1;
-    if (lastVisibleIndex >= totalOriginal) lastVisibleIndex -= totalOriginal; // для зацикленности
+    if (lastVisibleIndex >= totalOriginal) lastVisibleIndex -= totalOriginal;
 
-    // Показываем номер последней видимой (1-индексация)
     const counterSpan = document.querySelector(".carousel-counter__current");
-    if (counterSpan) counterSpan.innerText = lastVisibleIndex + 1;
+    if (counterSpan) counterSpan.textContent = lastVisibleIndex + 1;
 
     const totalSpan = document.querySelector(".carousel-counter__total");
-    if (totalSpan) totalSpan.innerText = totalOriginal;
+    if (totalSpan) totalSpan.textContent = totalOriginal;
   }
 
   function startAutoplay() {
     if (autoplayInterval) clearInterval(autoplayInterval);
-    autoplayInterval = setInterval(function () {
+    autoplayInterval = setInterval(() => {
       if (!isTransitioning) nextSlide();
     }, 4000);
   }
 
   function stopAutoplay() {
-    if (autoplayInterval) clearInterval(autoplayInterval);
-    autoplayInterval = null;
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
   }
 
   function resetAutoplay() {
@@ -109,6 +108,7 @@
 
   const prevBtn = document.querySelector(".section_player__button--left");
   const nextBtn = document.querySelector(".section_player__button--right");
+
   if (prevBtn) prevBtn.addEventListener("click", prevSlide);
   if (nextBtn) nextBtn.addEventListener("click", nextSlide);
 
@@ -118,10 +118,10 @@
     carouselContainer.addEventListener("mouseleave", startAutoplay);
   }
 
-  var resizeTimeout;
-  window.addEventListener("resize", function () {
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
     if (resizeTimeout) clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function () {
+    resizeTimeout = setTimeout(() => {
       updateCarousel(false);
     }, 100);
   });

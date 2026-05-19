@@ -16,17 +16,28 @@ html {
 
 /* ---------- ПЕРЕМЕННЫЕ (для адаптации) ---------- */
 :root {
-  --color-bg-pimary: #ffffff;
+  --color-bg-primary: #ffffff;
   --color-bg-second: #e9ded4;
+  --color-text-primary: #313131;
   --color-text-logo: #595653;
+  --color-text-muted: #666666;
+  --color-accent-red: #f54932;
+  --color-accent-blue: #3057a2;
+  --color-accent-gold: #fbcd7e;
+  --color-btn-dark: #1f1f1f;
+  --color-border: #d0d0d0;
+  --color-dot-inactive: #d9d9d9;
+  --color-dot-disabled: #d6d6d6;
   --font-title: "Merriweather", serif;
   --font-text: "Golos Text", sans-serif;
+  --container-padding: 72px;
+  --container-max-width: 1366px;
 }
 
 body {
   font-family: var(--font-text);
   overflow-x: hidden;
-  background-color: var(--color-bg-pimary);
+  background-color: var(--color-bg-primary);
 }
 
 /* ---------- HEADER ---------- */
@@ -39,22 +50,17 @@ body {
   background-color: var(--color-bg-second);
 }
 
-/* Текстура с Color Burn */
 .headers::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  height: 700px;
   pointer-events: none;
   z-index: 2;
   background-image: url("../assets/images/hero_bg.png");
   mix-blend-mode: color-burn;
-  height: 700px;
 }
 
-/* Контент header выше текстуры */
 .header__container {
   position: relative;
   max-width: 542px;
@@ -62,27 +68,27 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 72px;
+  margin: 0 0 0 var(--container-padding);
 }
 
-/* ---------- ЛОГОТИП ---------- */
+/* ---------- LOGO ---------- */
 .logo {
   position: relative;
   display: flex;
-  align-items: end; /* вертикальное выравнивание картинки и текстового блока */
-  gap: 6.35px; /* расстояние между картинкой и текстом (из макета) */
-  max-width: 245px; /* ограничиваем ширину всего блока */
+  align-items: end;
+  gap: 6.35px;
+  max-width: 245px;
   height: 36px;
   z-index: 3;
-  margin: 26px 0 0 72px;
+  margin: 26px 0 0 var(--container-padding);
 }
 
 .logo__img {
   position: relative;
-  width: 92px; /* пропорции сохраняются */
+  width: 92px;
   height: 32px;
   z-index: 3;
-  flex-shrink: 0; /* чтобы картинка не сжималась */
+  flex-shrink: 0;
   top: -1px;
 }
 
@@ -90,8 +96,8 @@ body {
   display: flex;
   height: 36px;
   z-index: 3;
-  flex-direction: column; /* две строки вертикально */
-  justify-content: center; /* центрируем строки по вертикали относительно картинки */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo__line {
@@ -101,20 +107,15 @@ body {
   font-size: 16.65px;
   font-weight: 700;
   color: var(--color-text-logo);
-  white-space: nowrap; /* каждая строка не переносится внутри себя */
+  white-space: nowrap;
   overflow: hidden;
 }
 
-/* ---------- БЛОК ЗАГОЛОВОК + ТЕКСТ + КНОПКИ ---------- */
-.hero-content {
-  max-width: 542px; /* ширина текстового блока из Figma (1366) */
-  margin-left: 0; /* начинается от края колонки 1 (то есть от левого отступа контейнера) */
-}
-
+/* ---------- HERO CONTENT ---------- */
 .header_content-title {
-  line-height: 1.1; /* 110% */
+  line-height: 1.1;
   margin-bottom: 24px;
-  color: #313131;
+  color: var(--color-text-primary);
   font-size: 60px;
   font-family: var(--font-title);
   font-weight: 400;
@@ -122,7 +123,6 @@ body {
   width: 542px;
 }
 
-/* Строки заголовка */
 .title-line-left {
   display: block;
   text-align: left;
@@ -142,9 +142,9 @@ body {
 .header_content-description {
   font-family: var(--font-text);
   font-size: 18px;
-  line-height: 1.3; /* 130% */
+  line-height: 1.3;
   margin-bottom: 40px;
-  color: var(--color-text);
+  color: var(--color-text-primary);
   max-width: 542px;
   text-align: center;
 }
@@ -154,7 +154,7 @@ body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 130px; /* расстояние от кнопок до конца header (до декораций или края) */
+  margin-bottom: 130px;
   z-index: 10;
 }
 
@@ -174,27 +174,27 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  background: #1f1f1f;
+  background: var(--color-btn-dark);
   color: white;
   border-radius: 66px;
 }
 
 .btn--primary {
-  background: #1f1f1f;
+  background: var(--color-btn-dark);
   color: white;
 }
 .btn--primary:hover {
-  background: #fbcd7e;
-  color: #1f1f1f;
+  background: var(--color-accent-gold);
+  color: var(--color-btn-dark);
 }
 
 .btn--secondary {
   background: transparent;
-  border: 2px solid #1f1f1f;
-  color: #1f1f1f;
+  border: 2px solid var(--color-btn-dark);
+  color: var(--color-btn-dark);
 }
 .btn--secondary:hover {
-  background: #1f1f1f;
+  background: var(--color-btn-dark);
   color: white;
 }
 
@@ -202,6 +202,7 @@ body {
   position: absolute;
   pointer-events: none;
   top: 270px;
+  left: calc((100% - var(--container-max-width)) / 2 + 682px);
 }
 
 .overlay-image-chess--queen {
@@ -284,15 +285,14 @@ body {
   }
 }
 
-/* Бегущая строка */
+/* ---------- MARQUEE ---------- */
 .marquee,
 .marquee-footer {
   overflow: hidden;
-  background: #f54932;
+  background: var(--color-accent-red);
   color: #fff;
   white-space: nowrap;
   font-family: var(--font-title);
-  /* font-size: clamp(14px, 4vw, 22px); */
   font-size: 22px;
   font-weight: 200;
   padding: 16px 0;
@@ -324,11 +324,11 @@ body {
   }
 }
 
-/* Остановка анимации при наведении (опционально) */
 .marquee:hover .marquee__inner {
   animation-play-state: paused;
 }
 
+/* ---------- LECTURE SECTION ---------- */
 .img-chess {
   width: 394px;
   height: 250px;
@@ -340,8 +340,181 @@ body {
   object-fit: cover;
 }
 
+.mask-group {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.mask-group img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mask-group::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/hero_bg.png");
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+}
+
+.main-content {
+  padding: 80px var(--container-padding) 200px;
+}
+
+.section_lecture--title {
+  margin-bottom: 64px;
+  display: flex;
+  gap: 104px;
+  align-items: center;
+}
+
+.section_lecture--text,
+.lecture-text-wrap {
+  font-family: var(--font-title);
+  font-size: 36px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.lecture-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture-text-wrap .part1 span,
+.lecture-text-wrap .part2-group span {
+  display: block;
+}
+
+.section_lecture--title-second {
+  display: flex;
+  gap: 16.5px;
+  width: 1222px;
+  height: 527px;
+}
+
+.second-title {
+  width: 652px;
+  margin-bottom: 60px;
+}
+
+.second-picture {
+  left: -27.5px;
+  top: -28px;
+}
+
+.black {
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+
+.red {
+  color: var(--color-accent-red);
+  font-weight: 700;
+}
+
+.section_lecture__table-container {
+  width: 704px;
+  height: 527px;
+  flex: none;
+  margin-left: -28px;
+  position: relative;
+}
+
+.section_lecture__table-container::before {
+  content: "";
+  position: absolute;
+  left: 306px;
+  top: 205px;
+  width: 1px;
+  height: 248px;
+  background: var(--color-border);
+}
+
+.schedule-table {
+  width: 704px;
+}
+
+.schedule-table td {
+  padding: 14.5px 16px 14px 0;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.schedule-table tr td:first-child {
+  padding-left: 0;
+  width: 306px;
+}
+
+.schedule-table tr td:last-child {
+  padding-left: 14px;
+}
+
+.schedule-table tr:first-child td {
+  padding-top: 0;
+  border-top: none;
+}
+
+.schedule-table tr:last-child td {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.schedule-table tr td:first-child {
+  border-left: none;
+}
+
+.schedule-table tr td:last-child {
+  border-right: none;
+}
+
+.name_table {
+  font-family: var(--font-text);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.value_table {
+  font-family: var(--font-text);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.old-price {
+  position: relative;
+  margin-right: 12px;
+}
+
+.old-price::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: 1px;
+  top: 50%;
+  height: 2px;
+  background: var(--color-accent-red);
+  border-radius: 2px;
+}
+
+.schedule-text {
+  margin-top: 48px;
+  color: var(--color-accent-blue);
+  font-family: var(--font-text);
+  font-size: 20px;
+}
+
+/* ---------- STAGES SECTION ---------- */
 .section_stages {
-  padding: 0 72px 200px 72px;
+  padding: 0 var(--container-padding) 200px;
 }
 
 .section_stages__general-line {
@@ -354,7 +527,7 @@ body {
   font-weight: 400;
   font-size: 54px;
   line-height: 1.2;
-  color: #313131;
+  color: var(--color-text-primary);
   text-transform: uppercase;
 }
 
@@ -363,32 +536,28 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  color: #3057a2;
+  color: var(--color-accent-blue);
   width: 280px;
   height: 38px;
   margin: 8px 0 9px 30px;
 }
 
-/* Грид: 3 колонки по 394px, 3 строки с автоматической высотой (задаётся через min-height карточек) */
 .section_stages__grid {
   display: grid;
   grid-template-columns: 394px 394px 394px;
   grid-auto-rows: auto;
-  gap: 20px; /* gutter между всеми ячейками */
+  gap: 20px;
   justify-content: center;
 }
 
-/* Общие стили карточек */
 .stage-card {
-  padding: 24px;
-  font-family: "Golos Text", sans-serif;
+  padding: 20px 20px 20px 72px;
+  font-family: var(--font-text);
   font-weight: 500;
   font-size: 20px;
   box-sizing: border-box;
-  position: relative; /* чтобы круг позиционировался внутри */
-  padding: 20px 20px 20px 72px; /* отступ слева: 20px (край карточки) + 36px (ширина круга) + 20px (расстояние от круга до текста) = 76px */
-  /* Можно верхний отступ оставить 20px, но чтобы текст не наезжал на круг, достаточно левого отступа */
-  min-height: 112px; /* или другие высоты, заданные ранее */
+  position: relative;
+  min-height: 112px;
   overflow: hidden;
   line-height: 1.2;
 }
@@ -427,19 +596,17 @@ body {
   left: 20px;
   width: 36px;
   height: 36px;
-  background: #fff; /* цвет фона круга – белый, можно изменить под макет */
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Golos Text", sans-serif;
+  font-family: var(--font-text);
   font-size: 18px;
   font-weight: 600;
-  color: #1f1f1f;
+  color: var(--color-btn-dark);
 }
 
-/* ----- Позиционирование карточек ----- */
-/* 1-й столбец – каждая карточка занимает свою строку */
 .stage-card--1 {
   grid-column: 1;
   grid-row: 1;
@@ -452,8 +619,6 @@ body {
   grid-column: 1;
   grid-row: 3;
 }
-
-/* 2-й столбец – карточки 4 и 5 в строках 1 и 2 */
 .stage-card--4 {
   grid-column: 2;
   grid-row: 1;
@@ -462,12 +627,14 @@ body {
   grid-column: 2;
   grid-row: 2;
 }
-
-/* Карточка 6: объединяет 2-й и 3-й столбцы в 3-й строке */
 .stage-card--6 {
   grid-column: 2 / span 2;
   grid-row: 3;
   overflow: visible;
+}
+.stage-card--7 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 
 .stage-card__fly {
@@ -480,13 +647,6 @@ body {
   pointer-events: none;
 }
 
-/* Карточка 7: объединяет строки 1 и 2 в 3-м столбце */
-.stage-card--7 {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-}
-
-/* ----- Высоты карточек (min-height, чтобы контент не обрезался) ----- */
 .stage-card--1,
 .stage-card--4 {
   height: 112px;
@@ -526,10 +686,17 @@ body {
   display: none;
 }
 
-/* Участники турнира */
-
+/* ---------- PLAYER SECTION ---------- */
 .section_player {
-  padding: 0 72px 140px 72px;
+  padding: 0 var(--container-padding) 140px;
+}
+
+.section_player__header {
+  display: flex;
+  align-items: center;
+  gap: 453px;
+  padding-bottom: 60px;
+  width: 1222px;
 }
 
 .section_player__title {
@@ -537,24 +704,33 @@ body {
   font-weight: 400;
   font-size: 54px;
   line-height: 1.2;
-  color: #313131;
+  color: var(--color-text-primary);
   text-transform: uppercase;
-  /* margin: 40px 0 20px; */
   width: 618px;
 }
 
+.section_player__button-controls {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 151px;
+}
+
 .section_player__button {
-  background: #313131;
+  background: var(--color-text-primary);
   height: 44px;
   width: 44px;
   border-radius: 50%;
   position: relative;
   transition: 0.4s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .section_player__button:hover {
-  background: #fbcd7e;
-  border: none;
+  background: var(--color-accent-gold);
 }
 
 .section_player__button--left::before,
@@ -599,28 +775,11 @@ body {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.section_player__button-controls {
-  position: relative;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  align-items: center;
-  width: 151px;
-}
-
-.section_player__header {
-  display: flex;
-  align-items: center;
-  gap: 453px;
-  padding-bottom: 60px;
-  width: 1222px;
-}
-
 .carousel-counter {
-  font-family: "Golos Text", sans-serif;
+  font-family: var(--font-text);
   font-size: 16px;
   font-weight: 400;
-  color: #1f1f1f;
+  color: var(--color-btn-dark);
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -636,7 +795,6 @@ body {
   gap: 20px;
 }
 
-/* Карточка участника */
 .participant-card {
   flex: 0 0 calc((100% - 40px) / 3);
   border-radius: 20px;
@@ -659,33 +817,32 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  justify-content: center;
 }
 
 .participant-card__name {
-  font-family: "Golos Text", sans-serif;
+  font-family: var(--font-text);
   font-size: 24px;
   margin: 0 0 6px;
   font-weight: 600;
 }
 
 .participant-card__desc {
-  font-family: "Golos Text", sans-serif;
+  font-family: var(--font-text);
   font-size: 20px;
-  color: #666;
+  color: var(--color-text-muted);
   margin: 0 0 20px;
 }
 
 .participant-card__btn {
   background: transparent;
-  border: 1px solid #3057a2;
+  border: 1px solid var(--color-accent-blue);
   border-radius: 40px;
-  font-family: "Golos Text";
+  font-family: var(--font-text);
   font-size: 16px;
   line-height: 1.2;
   cursor: pointer;
   transition: all 0.2s;
-  color: #3057a2;
+  color: var(--color-accent-blue);
   width: 113px;
   height: 35px;
   font-weight: 500;
@@ -697,196 +854,22 @@ body {
 }
 
 .participant-card__btn:hover {
-  background: #3057a2;
+  background: var(--color-accent-blue);
   color: white;
 }
 
-/* Футер */
-
+/* ---------- FOOTER ---------- */
 .footer_content {
   background-color: var(--color-bg-second);
-  padding: 40px 72px;
+  padding: 40px var(--container-padding);
   height: 150px;
 }
 
 .footer_content-text {
-  color: #313131;
+  color: var(--color-text-primary);
   opacity: 0.6;
   font-family: var(--font-text);
   font-weight: 400;
   line-height: 1.2;
   font-size: 16px;
-}
-
-.mask-group {
-  position: relative;
-  display: inline-block;
-  max-width: 100%;
-}
-
-.mask-group img {
-  max-width: 100%;
-  height: auto;
-}
-
-.mask-group::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../assets/images/hero_bg.png");
-  background-size: cover;
-  background-position: center;
-  mix-blend-mode: color-burn;
-  pointer-events: none;
-}
-
-.main-content {
-  padding: 80px 72px 200px 72px;
-}
-
-.section_lecture--title {
-  margin-bottom: 64px;
-  display: flex;
-  gap: 64px;
-  align-items: center;
-}
-
-.section_lecture--text,
-.section_lecture--text,
-.lecture-text-wrap {
-  font-family: var(--font-title);
-  font-size: 36px;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.lecture-text-wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.lecture-text-wrap .part1 span,
-.lecture-text-wrap .part2-group span {
-  display: block;
-}
-
-.section_lecture--title-second {
-  display: flex;
-  gap: 16.5px;
-  width: 1222px;
-  height: 527px;
-}
-
-.second-title {
-  width: 652px;
-  margin-bottom: 60px;
-}
-
-.second-picture {
-  left: -27.5px;
-  top: -28px;
-}
-
-.black {
-  color: #313131;
-  font-weight: 400;
-}
-
-.red {
-  color: #f54932;
-  font-weight: 700;
-}
-
-.section_lecture__table-container {
-  width: 704px;
-  height: 527px;
-  flex: none;
-  margin-left: -28px;
-  position: relative;
-}
-
-.section_lecture__table-container::before {
-  content: "";
-  position: absolute;
-  left: 306px;
-  top: 205px;
-  width: 1px;
-  height: 248px;
-  background: #d0d0d0;
-}
-
-.schedule-table {
-  width: 704px;
-}
-
-.schedule-table td {
-  padding: 14.5px 16px 14px 0;
-  border-bottom: 2px solid #d0d0d0;
-}
-
-.schedule-table tr td:first-child {
-  padding-left: 0;
-  width: 306px;
-}
-
-.schedule-table tr td:last-child {
-  padding-left: 14px;
-}
-
-.schedule-table tr:first-child td {
-  padding-top: 0;
-  border-top: none;
-}
-
-.schedule-table tr:last-child td {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.schedule-table tr td:first-child {
-  border-left: none;
-}
-
-.schedule-table tr td:last-child {
-  border-right: none;
-}
-
-.name_table {
-  font-family: var(--font-text);
-  font-size: 20px;
-  line-height: 1.2;
-  color: #313131;
-  opacity: 0.7;
-  font-weight: 400;
-}
-
-.value_table {
-  font-family: var(--font-text);
-  font-size: 20px;
-  line-height: 1.2;
-  color: #313131;
-  font-weight: 600;
-}
-
-.old-price {
-  position: relative;
-  margin-right: 12px;
-}
-
-.old-price::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  right: 1px;
-  top: 50%;
-  height: 2px;
-  background: #f54932;
-  border-radius: 2px;
-}
-
-.schedule-text {
-  margin-top: 48px;
-  color: #3057a2;
-  font-family: var(--font-text);
-  font-size: 20px;
 }

@@ -2,22 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Клуб четырех коней</title>
-
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz@0,18..144;1,18..144&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -35,6 +27,7 @@
           <span class="logo__line">ЧЕТЫРЕХ КОНЕЙ</span>
         </div>
       </div>
+
       <div class="header__container">
         <h1 class="header_content-title">
           <span class="title-line-left">Превратите</span>
@@ -42,30 +35,32 @@
           <span class="title-line-center">в столицу</span>
           <span class="title-line-end">земного шара</span>
         </h1>
+
         <p class="header_content-description">
           <span class="desc-span-1">Оплатите взнос на телеграммы</span>
           <span class="desc-span-2">для организации</span>
           <span class="desc-span-3">Международного</span>
           <span class="desc-span-4">васюкинского турнира по шахматам</span>
         </p>
+
         <div class="hero-content__buttons">
-          <button
-            class="btn btn--primary btn-anchor"
-            data-target="lecture"
-          >
+          <button class="btn btn--primary btn-anchor" data-target="lecture">
             Поддержать шахматную мысль
           </button>
-          <button class="btn btn--secondary btn-anchor" data-target="lecture-second">
+          <button
+            class="btn btn--secondary btn-anchor"
+            data-target="lecture-second"
+          >
             Подробнее о&nbsp;турнире
           </button>
         </div>
       </div>
 
-      <!-- Декоративные элементы (круг с текстом) -->
       <img
-        src="./assets/images/Ellipse_text.svg"
+        src="./assets/images/ellipse_with_text.png"
         alt=""
         class="rotating-text"
+        aria-hidden="true"
       />
 
       <div class="overlay-images">
@@ -73,87 +68,95 @@
           src="./assets/images/queen.svg"
           alt=""
           class="overlay-image-chess--queen"
+          aria-hidden="true"
         />
         <img
           src="./assets/images/chess.svg"
           alt=""
           class="overlay-image-chess--chess"
+          aria-hidden="true"
         />
-        <img src="./assets/images/city.png" alt="" class="overlay-images--1" />
+        <img
+          src="./assets/images/city.png"
+          alt=""
+          class="overlay-images--1"
+          aria-hidden="true"
+        />
         <img
           src="./assets/images/white_city.png"
           alt=""
           class="overlay-images--2"
+          aria-hidden="true"
         />
         <img
           src="./assets/images/chess2.svg"
           alt=""
           class="overlay-image-chess--chess2"
+          aria-hidden="true"
         />
-
         <img
           src="./assets/images/horse_top.svg"
           alt=""
           class="overlay-image-chess--horse"
+          aria-hidden="true"
         />
       </div>
     </header>
 
-    <!-- Бегущая строка под хедером -->
-    <div class="marquee">
+    <div class="marquee" aria-hidden="true">
       <div class="marquee__inner">
         <span class="marquee__text"
-          >Дело помощи утопающим — дело рук самих утопающих!
-        </span>
+          >Дело помощи утопающим — дело рук самих утопающих!</span
+        >
         <span class="marquee__separator">•</span>
         <span class="marquee__text"
-          >Шахматы двигают вперед не только культуру, но и экономику!
-        </span>
+          >Шахматы двигают вперед не только культуру, но и экономику!</span
+        >
         <span class="marquee__separator">•</span>
         <span class="marquee__text"
-          >Лед тронулся, господа присяжные заседатели!
-        </span>
+          >Лед тронулся, господа присяжные заседатели!</span
+        >
         <span class="marquee__separator">•</span>
         <span class="marquee__text"
-          >Дело помощи утопающим — дело рук самих утопающих!
-        </span>
+          >Дело помощи утопающим — дело рук самих утопающих!</span
+        >
         <span class="marquee__separator">•</span>
         <span class="marquee__text"
-          >Шахматы двигают вперед не только культуру, но и экономику!
-        </span>
+          >Шахматы двигают вперед не только культуру, но и экономику!</span
+        >
         <span class="marquee__separator">•</span>
         <span class="marquee__text"
-          >Лед тронулся, господа присяжные заседатели!
-        </span>
+          >Лед тронулся, господа присяжные заседатели!</span
+        >
         <span class="marquee__separator">•</span>
       </div>
     </div>
 
-    <!-- Остальной контент (временный для проверки) -->
     <main class="main-content">
-      <div id="lecture" class="section_lecture--title">
+      <section id="lecture" class="section_lecture--title">
         <div class="lecture-text-wrap">
           <span class="part1">
             <span class="black">Чтобы поддержать</span>
-            <span class="black">международный васюкинский</span>
+            <span class="black">международный васюкинский турнир</span>
           </span>
           <span class="part2-group">
-            <span class="black">турнир посетите лекцию на тему: </span>
+            <span class="black">посетите лекцию на тему: </span>
             <span class="red">«Плодотворная дебютная идея»</span>
           </span>
         </div>
         <div class="mask-group img-chess">
           <img src="assets/images/mans_play.svg" alt="Иллюстрация к лекции" />
         </div>
-      </div>
+      </section>
 
-      <div id="lecture-second" class="section_lecture--title-second">
+      <section id="lecture-second" class="section_lecture--title-second">
         <div class="mask-group second-picture">
           <img
             src="assets/images/one_man_play.png"
             alt="Один мужчина играет в шахматы"
           />
         </div>
+
         <div class="section_lecture__table-container">
           <div class="section_lecture--text second-title">
             <span class="black"> и Сеанс </span>
@@ -163,6 +166,7 @@
             <span class="black block-span">гроссмейстера</span>
             <span class="black inline-span">О. Бендера</span>
           </div>
+
           <table class="schedule-table">
             <tr>
               <td class="name_table">Место проведения:</td>
@@ -187,6 +191,7 @@
               </td>
             </tr>
           </table>
+
           <div class="schedule-text">
             <span>По всем вопросам обращаться</span>
             <span class="schedule-text__label"
@@ -194,20 +199,20 @@
             >
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
-    <!-- Этапы -->
     <section class="section_stages">
-      <h1 class="section_stages__title">Этапы преображения</h1>
+      <h2 class="section_stages__title">Этапы преображения</h2>
+
       <div class="section_stages__general-line">
-        <h1 class="section_stages__title">Васюков</h1>
-        <h6 class="section_stages__description">
+        <h3 class="section_stages__title">Васюков</h3>
+        <p class="section_stages__description">
           Будущие источники обогащения васюкинцев
-        </h6>
+        </p>
       </div>
+
       <div class="section_stages__grid">
-        <!-- 1-й столбец -->
         <div class="stage-card stage-card--1">
           <div class="stage-number">1</div>
           <span>Строительство железнодорожной магистрали Москва-Васюки</span>
@@ -225,7 +230,6 @@
           >
         </div>
 
-        <!-- 2-й столбец -->
         <div class="stage-card stage-card--4">
           <div class="stage-number">2</div>
           <span
@@ -246,10 +250,14 @@
             почтовых самолётов и дирижаблей во все концы света, включая
             Лос-Анжелос и Мельбурн</span
           >
-          <img class="stage-card__fly" src="assets/images/fly.svg" alt="" />
+          <img
+            class="stage-card__fly"
+            src="assets/images/fly.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
 
-        <!-- 3-й столбец -->
         <div class="stage-card stage-card--7">
           <div class="stage-number">3</div>
           <span>Поднятие сельского хозяйства в радиусе</span>
@@ -260,13 +268,13 @@
         </div>
       </div>
 
-      <!-- Карусель для мобильной версии -->
       <div class="stages-carousel">
         <div class="stages-carousel__fly-wrap">
           <img
             class="stages-carousel__fly"
             src="assets/images/fly.svg"
             alt=""
+            aria-hidden="true"
           />
         </div>
         <div class="stages-carousel__container">
@@ -333,28 +341,50 @@
         <div class="stages-carousel__controls">
           <button
             class="stages-carousel__btn stages-carousel__btn--prev"
+            aria-label="Предыдущий слайд"
           ></button>
           <div class="stages-carousel__dots">
-            <span class="stages-carousel__dot is-active"></span>
-            <span class="stages-carousel__dot"></span>
-            <span class="stages-carousel__dot"></span>
-            <span class="stages-carousel__dot"></span>
-            <span class="stages-carousel__dot"></span>
+            <span
+              class="stages-carousel__dot is-active"
+              role="button"
+              aria-label="Слайд 1"
+            ></span>
+            <span
+              class="stages-carousel__dot"
+              role="button"
+              aria-label="Слайд 2"
+            ></span>
+            <span
+              class="stages-carousel__dot"
+              role="button"
+              aria-label="Слайд 3"
+            ></span>
+            <span
+              class="stages-carousel__dot"
+              role="button"
+              aria-label="Слайд 4"
+            ></span>
+            <span
+              class="stages-carousel__dot"
+              role="button"
+              aria-label="Слайд 5"
+            ></span>
           </div>
           <button
             class="stages-carousel__btn stages-carousel__btn--next"
+            aria-label="Следующий слайд"
           ></button>
         </div>
       </div>
     </section>
 
-    <!-- Участники турнира -->
     <section class="section_player">
       <div class="section_player__header">
-        <h1 class="section_player__title">Участники турнира</h1>
+        <h2 class="section_player__title">Участники турнира</h2>
         <div class="section_player__button-controls">
           <button
             class="section_player__button section_player__button--left"
+            aria-label="Предыдущий участник"
           ></button>
           <span class="carousel-counter">
             <span class="carousel-counter__current">1</span>
@@ -363,12 +393,13 @@
           </span>
           <button
             class="section_player__button section_player__button--right"
+            aria-label="Следующий участник"
           ></button>
         </div>
       </div>
+
       <div class="participants-carousel">
         <div class="participants-track">
-          <!-- Карточки участников (все 6) -->
           <div class="participant-card">
             <div class="participant-card__avatar">
               <img src="./assets/images/man_player.svg" alt="Фото участника" />
@@ -421,41 +452,40 @@
       </div>
     </section>
 
-    <!-- Футер -->
     <footer>
-      <!-- Бегущая строка перед footer -->
-      <div class="marquee-footer">
+      <div class="marquee-footer" aria-hidden="true">
         <div class="marquee__inner">
           <span class="marquee__text"
-            >Дело помощи утопающим — дело рук самих утопающих!
-          </span>
+            >Дело помощи утопающим — дело рук самих утопающих!</span
+          >
           <span class="marquee__separator">•</span>
           <span class="marquee__text"
-            >Шахматы двигают вперед не только культуру, но и экономику!
-          </span>
+            >Шахматы двигают вперед не только культуру, но и экономику!</span
+          >
           <span class="marquee__separator">•</span>
           <span class="marquee__text"
-            >Лед тронулся, господа присяжные заседатели!
-          </span>
+            >Лед тронулся, господа присяжные заседатели!</span
+          >
           <span class="marquee__separator">•</span>
           <span class="marquee__text"
-            >Дело помощи утопающим — дело рук самих утопающих!
-          </span>
+            >Дело помощи утопающим — дело рук самих утопающих!</span
+          >
           <span class="marquee__separator">•</span>
           <span class="marquee__text"
-            >Шахматы двигают вперед не только культуру, но и экономику!
-          </span>
+            >Шахматы двигают вперед не только культуру, но и экономику!</span
+          >
           <span class="marquee__separator">•</span>
           <span class="marquee__text"
-            >Лед тронулся, господа присяжные заседатели!
-          </span>
+            >Лед тронулся, господа присяжные заседатели!</span
+          >
           <span class="marquee__separator">•</span>
         </div>
       </div>
+
       <div class="footer_content">
-        <span class="footer_content-text block-span">
-          Все персонажи, события и цитаты
-        </span>
+        <span class="footer_content-text block-span"
+          >Все персонажи, события и цитаты</span
+        >
         <span class="footer_content-text block-span"
           >являются вымышленными</span
         >
@@ -473,6 +503,7 @@
         >
       </div>
     </footer>
+
     <script src="js/main.js"></script>
     <script src="js/participants-carousel.js"></script>
     <script src="js/stages-carousel.js"></script>
