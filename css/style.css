@@ -119,6 +119,7 @@ body {
   font-family: var(--font-title);
   font-weight: 400;
   text-transform: uppercase;
+  width: 542px;
 }
 
 /* Строки заголовка */
@@ -472,7 +473,7 @@ body {
 .stage-card__fly {
   position: absolute;
   right: -62px;
-  top: -97px;
+  top: -95px;
   width: 400px;
   height: auto;
   z-index: 10;
@@ -523,12 +524,6 @@ body {
 
 .stages-carousel {
   display: none;
-}
-
-@media (max-width: 400px) {
-  .stages-carousel {
-    display: block;
-  }
 }
 
 /* Участники турнира */
