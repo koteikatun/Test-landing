@@ -1,29 +1,3 @@
-@media (min-width: 1920px) {
-  .logo {
-    margin: 26px 0 0 349px;
-  }
-
-  .header__container {
-    margin: 0 0 0 349px;
-  }
-
-  .main-content {
-    padding: 80px 349px 200px 349px;
-  }
-
-  .section_stages {
-    padding: 0 349px 200px 349px;
-  }
-
-  .section_player {
-    padding: 0 349px 140px 349px;
-  }
-
-  .participants-carousel {
-    max-width: 100%;
-  }
-}
-
 @media (min-width: 1366px) {
   .header_content-title {
     width: 542px;
@@ -66,7 +40,32 @@
   }
 }
 
-/* вот это */
+@media (min-width: 1367px) and (max-width: 1919px) {
+  .logo {
+    margin: 26px calc((100% - 1366px) / 2 + 72px) 0;
+  }
+
+  .header__container {
+    margin: 0 calc((100% - 1366px) / 2 + 72px) 200px;
+  }
+
+  .main-content {
+    padding: 80px calc((100% - 1366px) / 2 + 72px) 200px;
+  }
+
+  .section_stages {
+    padding: 0 calc((100% - 1366px) / 2 + 72px) 200px;
+  }
+
+  .section_player {
+    padding: 0 calc((100% - 1366px) / 2 + 72px) 140px;
+  }
+
+  .participants-carousel {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1365px) {
   .headers {
     height: 812px;
@@ -74,6 +73,14 @@
 
   .headers::before {
     height: 100%;
+  }
+
+  .logo {
+    margin: 26px calc((100% - 1366px) / 2 + 72px) 0;
+  }
+
+  .header__container {
+    margin: 0 calc((100% - 1366px) / 2 + 72px) 200px;
   }
 
   .btn--secondary {
@@ -427,8 +434,8 @@
   }
 
   .overlay-images {
-    top: 372px;
-    left: -122px;
+    top: calc((100% - 769px) / 4 + 372px);
+    left: calc((100% - 769px) / 2 - 122px);
   }
 
   .rotating-text {
@@ -438,27 +445,27 @@
   }
 
   .overlay-image-chess--queen {
-    width: 66px;
-    left: 605px;
-    top: 172px;
+    width: 47px;
+    left: calc((100% - 769px) / 2 + 900px);
+    top: calc((100% - 769px) / 4 + 412px);
   }
 
   .overlay-image-chess--chess {
-    width: 66px;
-    left: 798px;
-    top: 117px;
+    width: 58px;
+    left: calc((100% - 769px) / 2 + 1102px);
+    top: calc((100% - 769px) / 4 + 330px);
   }
 
   .overlay-images--1 {
-    width: 1000px;
-    left: 82px;
-    top: 168px;
+    width: 1081px;
+    left: calc((100% - 769px) / 2 + 321px);
+    top: calc((100% - 769px) / 4 + 352px);
   }
 
   .overlay-images--2 {
-    width: 1000px;
-    left: 70px;
-    top: 160px;
+    width: 1081px;
+    left: calc((100% - 769px) / 2 + 307px);
+    top: calc((100% - 769px) / 4 + 344px);
   }
 
   .overlay-image-chess--chess2 {
@@ -466,13 +473,9 @@
   }
 
   .overlay-image-chess--horse {
-    width: 100px;
-    left: 698px;
-    top: 331px;
-  }
-
-  .main-content {
-    padding: 80px 20px 200px 20px;
+    width: 91px;
+    left: calc((100% - 769px) / 2 + 981px);
+    top: calc((100% - 769px) / 4 + 523px);
   }
 
   .section_stages {
@@ -508,6 +511,7 @@
     gap: 30px;
     padding: 0 20px;
     margin-bottom: 44px;
+    text-align: center;
   }
 
   .lecture-text-wrap {
@@ -561,23 +565,14 @@
   }
 
   .second-picture {
-    left: 0;
-    top: 0;
+    left: 200px;
+    top: 4px;
   }
 
   .second-title {
     width: 100%;
     margin-bottom: 44px;
-  }
-
-  .second-title .block-span {
-    display: block;
-    white-space: nowrap;
-  }
-
-  .second-title .inline-span {
-    display: block;
-    letter-spacing: 0.5px;
+    text-align: center;
   }
 
   .section_lecture__table-container {
@@ -755,9 +750,21 @@
     width: 240px;
     height: 240px;
   }
+
+  .main-content {
+    padding: 80px calc((100% - 766px) / 2 + -69px) 200px;
+  }
+
+  .section_stages {
+    padding: 0 calc((100% - 766px) / 2 + -50px) 200px;
+  }
+
+  .section_player {
+    padding: 0 calc((100% - 766px) / 2 + -50px) 140px;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 578px) and (max-width: 768px) {
   .headers {
     height: 812px;
   }
@@ -766,6 +773,9 @@
     height: 100%;
   }
 
+  .header__container {
+    margin: 0 0 0 40px;
+  }
   .btn--secondary {
     background: #fff;
     color: #1f1f1f;
@@ -834,11 +844,7 @@
   }
 
   .logo {
-    margin: 26px 0 0 72px;
-  }
-
-  .header__container {
-    margin: 0 0 0 72px;
+    margin: 26px 0 0 30px;
   }
 
   .header_content-title {
@@ -854,6 +860,7 @@
     gap: 30px;
     padding: 0 20px;
     margin-bottom: 44px;
+    text-align: center;
   }
 
   .lecture-text-wrap {
@@ -904,6 +911,7 @@
     width: 100%;
     height: auto;
     gap: 24px;
+    text-align: center;
   }
 
   .second-picture {
@@ -914,16 +922,7 @@
   .second-title {
     width: 100%;
     margin-bottom: 44px;
-  }
-
-  .second-title .block-span {
-    display: block;
-    white-space: nowrap;
-  }
-
-  .second-title .inline-span {
-    display: block;
-    letter-spacing: 0.5px;
+    text-align: center;
   }
 
   .section_lecture__table-container {
@@ -1027,8 +1026,21 @@
   }
 
   .section_stages__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    display: none;
+  }
+
+  .stage-card {
+    padding: 16px 16px 16px 56px;
+    min-height: auto;
+    font-size: 23px;
+  }
+
+  .stage-number {
+    top: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
   }
 
   .stage-card--1 span,
@@ -1037,6 +1049,7 @@
   .stage-card--4 span,
   .stage-card--5 span,
   .stage-card--7 span {
+    display: inline;
     width: auto;
   }
 
@@ -1061,6 +1074,198 @@
 
   .stage-card__fly {
     top: 77px;
+  }
+
+  /* --- Stages Carousel --- */
+  .stages-carousel {
+    position: relative;
+  }
+
+  .stages-carousel__fly-wrap {
+    text-align: center;
+    margin-bottom: -70px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .stages-carousel__fly {
+    width: 200px;
+    height: auto;
+    margin-left: 40px;
+  }
+
+  .stages-carousel__container {
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .stages-carousel__track {
+    display: flex;
+    height: 300px;
+    transition: transform 0.4s ease;
+  }
+
+  .stages-carousel__slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stages-carousel__slide .stage-card {
+    flex: 1;
+  }
+
+  .stages-carousel__slide .stage-card--1 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 73px;
+  }
+
+  .stages-carousel__slide .stage-card--2 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 53px;
+  }
+
+  .stages-carousel__slide .stage-card--3 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 91px;
+  }
+
+  .stages-carousel {
+    display: block;
+  }
+
+  .stages-carousel__slide .stage-card--5 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 76px;
+  }
+
+  .stages-carousel__slide .stage-card--7 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 91px;
+  }
+
+  .stages-carousel__slide .stage-card--7,
+  .stages-carousel__slide .stage-card--3,
+  .stages-carousel__slide .stage-card--5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stages-carousel__slide .stage-card--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 16px 16px 56px;
+  }
+
+  .stages-carousel__slide .stage-card--1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 16px 16px 56px;
+  }
+
+  .stages-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .stages-carousel__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #313131;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .stages-carousel__btn:hover {
+    background: #fbcd7e;
+  }
+
+  .stages-carousel__btn:disabled {
+    background: #d6d6d6;
+    cursor: default;
+  }
+
+  .stages-carousel__btn--prev::before,
+  .stages-carousel__btn--prev::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    height: 2px;
+    transform-origin: left center;
+  }
+
+  .stages-carousel__btn--next::before,
+  .stages-carousel__btn--next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    height: 2px;
+    transform-origin: right center;
+  }
+
+  .stages-carousel__btn--prev::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__btn--prev::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stages-carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .stages-carousel__dot.is-active {
+    background: #313131;
   }
 
   .section_player {
@@ -1100,6 +1305,1214 @@
   .participant-card__avatar {
     width: 240px;
     height: 240px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 577px) {
+  .logo {
+    margin: 26px calc((100% - 577px) / 2 + 72px) 0;
+  }
+
+  .header__container {
+    margin: 0 calc((100% - 577px) / 2 + 117px) 0;
+    width: 335px;
+  }
+
+  .hero-content__buttons {
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 80px calc((100% - 577px) / 2 + 72px) 200px;
+  }
+
+  .section_stages {
+    padding: 0 calc((100% - 577px) / 2 + 72px) 200px;
+  }
+
+  .section_player {
+    padding: 0 calc((100% - 577px) / 2 + 72px) 140px;
+  }
+
+  .participants-carousel {
+    max-width: 100%;
+  }
+
+  .headers {
+    height: 812px;
+  }
+
+  .headers::before {
+    height: 100%;
+  }
+
+  .btn--secondary {
+    background: #fff;
+    color: #1f1f1f;
+    border: none;
+  }
+
+  .overlay-images {
+    position: absolute;
+    pointer-events: none;
+    top: 4px;
+    left: 10px;
+  }
+
+  .overlay-image-chess--queen {
+    width: 52px;
+    left: 384px;
+    top: 216px;
+  }
+
+  .overlay-image-chess--chess {
+    width: 52px;
+    left: 574px;
+    top: 158px;
+  }
+
+  .overlay-images--1 {
+    width: 900px;
+    left: -76px;
+    top: 193px;
+  }
+
+  .overlay-images--2 {
+    width: 900px;
+    left: -87px;
+    top: 186px;
+  }
+
+  .overlay-image-chess--chess2 {
+    display: none;
+  }
+
+  .overlay-image-chess--horse {
+    width: 88px;
+    left: 484px;
+    top: 344px;
+  }
+
+  .main-content {
+    padding: 80px 20px 200px 20px;
+  }
+
+  .section_stages {
+    padding: 0 20px 200px 20px;
+  }
+
+  .section_player {
+    padding: 0 20px 140px 20px;
+  }
+
+  .footer_content {
+    padding: 40px 20px;
+  }
+
+  .logo {
+    margin: 26px 0 0 30px;
+  }
+
+  .header_content-title {
+    font-size: 36px;
+    width: 335px;
+  }
+
+  .title-line-center {
+    left: 80px;
+  }
+
+  .section_lecture--title {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  .lecture-text-wrap {
+    display: contents;
+  }
+
+  .lecture-text-wrap .part1,
+  .lecture-text-wrap .part2-group {
+    display: block;
+  }
+
+  .lecture-text-wrap .part1 span,
+  .lecture-text-wrap .part2-group span {
+    display: inline;
+  }
+
+  .part1 {
+    order: 0;
+  }
+
+  .section_lecture--title .mask-group {
+    order: 1;
+  }
+
+  .part2-group {
+    order: 2;
+    margin-top: 2px;
+  }
+
+  .section_lecture--text,
+  .lecture-text-wrap,
+  .part1,
+  .part2-group {
+    font-size: 32px;
+  }
+
+  .img-chess {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .mask-group.img-chess img {
+    object-fit: contain;
+  }
+
+  .section_lecture--title-second {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+  }
+
+  .second-picture {
+    left: 0;
+    top: 0;
+  }
+
+  .second-title {
+    width: 100%;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  .section_lecture__table-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .section_lecture__table-container::before {
+    display: none;
+  }
+
+  .schedule-text__label {
+    display: block;
+  }
+
+  .section_stages__general-line {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .section_stages__title {
+    font-size: 44px;
+  }
+
+  .section_stages__description {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .section_stages__grid {
+    display: none;
+  }
+
+  .stage-card {
+    padding: 16px 16px 16px 56px;
+    min-height: auto;
+    font-size: 23px;
+  }
+
+  .stage-number {
+    top: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .stage-card--1 span,
+  .stage-card--2 span,
+  .stage-card--3 span,
+  .stage-card--4 span,
+  .stage-card--5 span,
+  .stage-card--7 span {
+    display: inline;
+    width: auto;
+  }
+
+  .stage-card--1,
+  .stage-card--4 {
+    height: auto;
+  }
+
+  .stage-card--2,
+  .stage-card--5 {
+    min-height: auto;
+  }
+
+  .stage-card--3,
+  .stage-card--6 {
+    min-height: auto;
+  }
+
+  .stage-card--7 {
+    min-height: auto;
+  }
+
+  .stage-card__fly {
+    top: 77px;
+  }
+
+  /* --- Stages Carousel --- */
+  .stages-carousel {
+    position: relative;
+  }
+
+  .stages-carousel__fly-wrap {
+    text-align: center;
+    margin-bottom: -70px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .stages-carousel__fly {
+    width: 200px;
+    height: auto;
+    margin-left: 40px;
+  }
+
+  .stages-carousel__container {
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .stages-carousel__track {
+    display: flex;
+    height: 300px;
+    transition: transform 0.4s ease;
+  }
+
+  .stages-carousel__slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stages-carousel__slide .stage-card {
+    flex: 1;
+  }
+
+  .stages-carousel__slide .stage-card--1 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 73px;
+  }
+
+  .stages-carousel__slide .stage-card--2 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 53px;
+  }
+
+  .stages-carousel__slide .stage-card--3 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 91px;
+  }
+
+  .stages-carousel {
+    display: block;
+  }
+
+  .stages-carousel__slide .stage-card--5 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 76px;
+  }
+
+  .stages-carousel__slide .stage-card--7 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 77px;
+  }
+
+  .stages-carousel__slide .stage-card--7,
+  .stages-carousel__slide .stage-card--3,
+  .stages-carousel__slide .stage-card--5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stages-carousel__slide .stage-card--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 16px 16px 56px;
+  }
+
+  .stages-carousel__slide .stage-card--1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 16px 16px 56px;
+  }
+
+  .stages-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .stages-carousel__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #313131;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .stages-carousel__btn:hover {
+    background: #fbcd7e;
+  }
+
+  .stages-carousel__btn:disabled {
+    background: #d6d6d6;
+    cursor: default;
+  }
+
+  .stages-carousel__btn--prev::before,
+  .stages-carousel__btn--prev::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    height: 2px;
+    transform-origin: left center;
+  }
+
+  .stages-carousel__btn--next::before,
+  .stages-carousel__btn--next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    height: 2px;
+    transform-origin: right center;
+  }
+
+  .stages-carousel__btn--prev::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__btn--prev::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stages-carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .stages-carousel__dot.is-active {
+    background: #313131;
+  }
+
+  .section_player {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_player__header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .section_player__title {
+    width: auto;
+    font-size: 44px;
+    margin: 0;
+  }
+
+  .participants-track {
+    gap: 15px;
+  }
+
+  .participant-card {
+    flex: 0 0 calc((100% - 15px) / 2);
+    padding: 0 10px;
+    height: auto;
+  }
+
+  .participant-card__avatar {
+    width: 240px;
+    height: 240px;
+  }
+  .headers {
+    width: 100%;
+    height: 812px;
+  }
+
+  .headers::before {
+    height: 100%;
+  }
+
+  .logo__img {
+    width: 80.5px;
+    height: 28px;
+    position: relative;
+    top: -2px;
+  }
+
+  .logo__text {
+    display: flex;
+    height: 32px;
+    z-index: 3;
+    flex-direction: column; /* две строки вертикально */
+    justify-content: center; /* центрируем строки по вертикали относительно картинки */
+  }
+
+  .logo__line {
+    z-index: 3;
+    display: block;
+    font-family: var(--font-text);
+    font-size: 14.42px;
+    font-weight: 700;
+    color: var(--color-text-logo);
+    white-space: nowrap; /* каждая строка не переносится внутри себя */
+    line-height: 1.08;
+  }
+
+  .header__container {
+    width: 335px;
+    height: 393px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+  }
+
+  .header_content-title {
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #313131;
+    font-size: 36px;
+    font-family: var(--font-title);
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 335px;
+  }
+
+  .title-line-left {
+    height: 40px;
+    letter-spacing: 1.02px;
+  }
+
+  .title-line-end {
+    height: 40px;
+    letter-spacing: 0.6px;
+  }
+
+  .title-line-center {
+    left: 63.25px;
+    height: 40px;
+    letter-spacing: 0.7px;
+  }
+
+  .header_content-description {
+    color: #313131;
+    font-family: "Golos Text";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .header_content-description .desc-span-1 {
+    display: block;
+  }
+
+  .header_content-description .desc-span-3 {
+    display: inline;
+  }
+
+  .header_content-description .desc-span-4 {
+    display: block;
+  }
+
+  .hero-content__buttons {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 60px;
+  }
+
+  .btn {
+    display: flex;
+    width: 335px;
+    height: 47px;
+    padding: 18px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+  }
+
+  .btn--secondary {
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    border-radius: 66px;
+    opacity: 0.9;
+    background: #fff;
+    color: #1f1f1f;
+    text-align: center;
+    border: none;
+  }
+
+  .rotating-text {
+    position: absolute;
+    inset: 0;
+    animation: rotateText 30s linear infinite;
+    z-index: 1;
+    left: 3px;
+    top: 431px;
+    width: 471px;
+    height: 353px;
+    max-width: none;
+  }
+
+  .overlay-image-chess--queen {
+    position: absolute;
+    top: 545px;
+    left: 64px;
+    width: 60px;
+    height: 119px;
+    z-index: 1;
+    max-width: none;
+  }
+
+  .overlay-image-chess--chess {
+    top: 497px;
+    left: 228.6px;
+    width: 61px;
+    height: 120px;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(7deg);
+    max-width: none;
+  }
+
+  .overlay-image-chess--chess2 {
+    display: none;
+  }
+
+  .overlay-images--1 {
+    position: absolute;
+    top: 540px;
+    left: -401px;
+    z-index: 1;
+    width: 887px;
+    height: 248px;
+    max-width: none;
+  }
+
+  .overlay-images--2 {
+    position: absolute;
+    top: 534px;
+    left: -401px;
+    z-index: 1;
+    max-width: none;
+    width: 874.732px;
+    height: 252.985px;
+  }
+
+  .overlay-image-chess--horse {
+    position: absolute;
+    top: 657px;
+    left: 146px;
+    z-index: 2;
+    width: 99px;
+    height: 122px;
+    max-width: none;
+  }
+
+  .marquee {
+    padding: 10px 0;
+    position: relative;
+    top: -35px;
+    height: 38px;
+    z-index: 3;
+  }
+
+  .marquee__inner {
+    color: #fff;
+    text-align: right;
+    font-family: Merriweather;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 17.6px */
+    text-transform: uppercase;
+  }
+
+  /* ----- MAIN ----- */
+  .main-content {
+    padding: 0 0 120px 0;
+  }
+
+  .section_lecture--title {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 34px;
+  }
+
+  .lecture-text-wrap {
+    display: contents;
+  }
+
+  .lecture-text-wrap .part1,
+  .lecture-text-wrap .part2-group {
+    display: block;
+  }
+
+  .lecture-text-wrap .part1 span,
+  .lecture-text-wrap .part2-group span {
+    display: inline;
+  }
+
+  .part1 {
+    order: 0;
+  }
+
+  .section_lecture--title .mask-group {
+    order: 1;
+  }
+
+  .part2-group {
+    order: 2;
+    margin-top: 2px;
+  }
+
+  .part2-group .red {
+    line-height: 1.35;
+    letter-spacing: 0.14px;
+  }
+
+  .img-chess {
+    height: 212px;
+  }
+
+  .section_lecture--text,
+  .lecture-text-wrap,
+  .part1,
+  .part2-group {
+    font-size: 28px;
+  }
+
+  .second-picture {
+    left: 0;
+    top: 0;
+  }
+
+  .section_lecture__table-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .second-title .red {
+    letter-spacing: 0.19px;
+  }
+
+  .second-title .black {
+    letter-spacing: 0.19px;
+  }
+
+  .second-title .block-span {
+    display: block;
+    white-space: nowrap;
+    letter-spacing: 0.15px;
+  }
+
+  .second-title .inline-span {
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  .section_lecture__table-container::before {
+    display: none;
+  }
+
+  .schedule-table {
+    width: 100%;
+  }
+
+  .schedule-table tr {
+    display: block;
+  }
+
+  .schedule-table td {
+    display: block;
+    width: 336px;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .schedule-table tr td:first-child {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 12px;
+    padding-top: 14px;
+  }
+
+  .schedule-table tr td:last-child {
+    padding-left: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  .schedule-table tr:first-child td {
+    padding-top: 0px;
+  }
+
+  .schedule-table tr:last-child td:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-table tr:nth-child(4) {
+    display: flex;
+    gap: 12px;
+    padding: 13px 0 13px 0;
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  .schedule-table tr:nth-child(4) td {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .schedule-table tr:nth-child(4) td:first-child {
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .value_table {
+    margin-bottom: 4px;
+  }
+
+  .name_table,
+  .value_table {
+    font-size: 20px;
+  }
+
+  .schedule-text {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .schedule-text__label {
+    display: block;
+  }
+
+  /* ----- STAGES ----- */
+  .section_stages {
+    padding: 0 20px 120px 20px;
+  }
+
+  .section_stages__general-line {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section_stages__title {
+    font-size: 36px;
+    letter-spacing: 0.9px;
+    line-height: 1.1;
+  }
+
+  .section_stages__description {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .section_stages__grid {
+    display: none;
+  }
+
+  .stage-card {
+    padding: 16px 16px 16px 56px;
+    min-height: auto;
+    font-size: 18px;
+  }
+
+  .stage-number {
+    top: 16px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .stage-card--1 span,
+  .stage-card--2 span,
+  .stage-card--3 span,
+  .stage-card--4 span,
+  .stage-card--5 span,
+  .stage-card--7 span {
+    display: inline;
+    width: auto;
+  }
+
+  /* --- Stages Carousel --- */
+  .stages-carousel {
+    position: relative;
+  }
+
+  .stages-carousel__fly-wrap {
+    text-align: center;
+    margin-bottom: -70px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .stages-carousel__fly {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  .stages-carousel__container {
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .stages-carousel__track {
+    display: flex;
+    height: 300px;
+    transition: transform 0.4s ease;
+  }
+
+  .stages-carousel__slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stages-carousel__slide .stage-card {
+    flex: 1;
+  }
+
+  .stages-carousel__slide .stage-card--1 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 64px;
+  }
+
+  .stages-carousel__slide .stage-card--2 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 67px;
+  }
+
+  .stages-carousel__slide .stage-card--3 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 89px;
+  }
+
+  .stages-carousel {
+    display: block;
+  }
+
+  .stages-carousel__slide .stage-card--5 .stage-number {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin-top: 55px;
+  }
+
+  .stages-carousel__slide .stage-card--7,
+  .stages-carousel__slide .stage-card--3,
+  .stages-carousel__slide .stage-card--5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stages-carousel__slide .stage-card--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 16px 16px 56px;
+  }
+
+  .stages-carousel__slide .stage-card--1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 16px 16px 56px;
+  }
+
+  .stages-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .stages-carousel__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #313131;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .stages-carousel__btn:hover {
+    background: #fbcd7e;
+  }
+
+  .stages-carousel__btn:disabled {
+    background: #d6d6d6;
+    cursor: default;
+  }
+
+  .stages-carousel__btn--prev::before,
+  .stages-carousel__btn--prev::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    height: 2px;
+    transform-origin: left center;
+  }
+
+  .stages-carousel__btn--next::before,
+  .stages-carousel__btn--next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    height: 2px;
+    transform-origin: right center;
+  }
+
+  .stages-carousel__btn--prev::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__btn--prev::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::before {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .stages-carousel__btn--next::after {
+    width: 11.96px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .stages-carousel__dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stages-carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .stages-carousel__dot.is-active {
+    background: #313131;
+  }
+
+  /* ----- PLAYER SECTION ----- */
+  .section_player {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 100px 20px;
+  }
+
+  .section_player__header {
+    display: contents;
+  }
+
+  .section_player__title {
+    order: 0;
+    font-size: 36px;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .participants-carousel {
+    order: 1;
+  }
+
+  .section_player__button-controls {
+    order: 2;
+    gap: 12px;
+    margin: 30px auto 0;
+  }
+
+  .section_player__button {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .participants-track {
+    gap: 10px;
+  }
+
+  .participant-card {
+    flex: 0 0 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .participant-card__avatar {
+    width: 244px;
+    height: 244px;
+    margin-bottom: 28px;
+  }
+
+  .participant-card__name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .participant-card__desc {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section_player__button--left::before {
+    width: 6.92px;
+  }
+
+  .section_player__button--left::after {
+    width: 6.92px;
+  }
+
+  .section_player__button--right::before {
+    width: 6.92px;
+  }
+
+  .section_player__button--right::after {
+    width: 6.92px;
+  }
+
+  /* ----- FOOTER ----- */
+  .marquee-footer {
+    height: 38px;
+    padding: 10px 0;
+  }
+
+  .footer_content {
+    padding: 40px 20px 60px 20px;
+    height: 252px;
+  }
+
+  .footer_content-text {
+    font-size: 16px;
+  }
+
+  .footer_content-text.block-span {
+    display: block;
+  }
+
+  .footer_content-text.inline-span {
+    display: inline;
   }
 }
 
