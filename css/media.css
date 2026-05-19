@@ -1,74 +1,26 @@
-@media (min-width: 1025px) {
-  .main-content {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 80px 72px 200px 72px;
-  }
-
-  .section_stages {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 0 72px 200px 72px;
-  }
-
-  .section_player {
-    max-width: 1366px;
-    margin: 0 auto;
-    padding: 0 72px 140px 72px;
-  }
-
-  .footer_content {
-    padding: 40px calc((100% - 1366px) / 2 + 72px);
+@media (min-width: 1920px) {
+  .logo {
+    margin: 26px 0 0 349px;
   }
 
   .header__container {
-    width: 1366px;
-    max-width: 1366px;
-    margin: 0 auto;
-    padding-left: 72px;
+    margin: 0 0 0 349px;
   }
 
-  .logo {
-    width: 1366px;
-    max-width: 1366px;
-    margin: 26px auto 0;
-    padding-left: 72px;
+  .main-content {
+    padding: 80px 349px 200px 349px;
   }
 
-  .section_lecture--title {
-    gap: 40px;
+  .section_stages {
+    padding: 0 349px 200px 349px;
   }
 
-  .section_lecture--title-second {
-    width: 100%;
-    gap: 10px;
+  .section_player {
+    padding: 0 349px 140px 349px;
   }
 
-  .second-title {
-    width: auto;
-  }
-
-  .section_stages__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .stage-card--1 span,
-  .stage-card--2 span,
-  .stage-card--3 span,
-  .stage-card--4 span,
-  .stage-card--5 span,
-  .stage-card--7 span {
-    width: auto;
-  }
-
-  .section_player__header {
-    gap: 0;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .section_player__title {
-    width: auto;
+  .participants-carousel {
+    max-width: 100%;
   }
 }
 
@@ -111,6 +63,351 @@
 
   .overlay-images--2 {
     left: calc((100% - 1366px) / 2 - 120px);
+  }
+}
+
+/* вот это */
+@media (min-width: 1025px) and (max-width: 1365px) {
+  .headers {
+    height: 812px;
+  }
+
+  .headers::before {
+    height: 100%;
+  }
+
+  .btn--secondary {
+    background: #fff;
+    color: #1f1f1f;
+    border: none;
+  }
+
+  .overlay-images {
+    top: 372px;
+    left: calc((100% - 1365px) / 2 + 59px);
+  }
+
+  .rotating-text {
+    top: calc(312px - (100% - 1025px) / 2 - 101px);
+    left: calc((100% - 1365px) / 2 + 590px);
+    width: calc((100% - 1025px) / 2 + 607px);
+    height: calc((100% - 1025px) / 2 + 760px);
+  }
+
+  .overlay-image-chess--queen {
+    width: 74px;
+    left: 656px;
+    top: 166px;
+  }
+
+  .overlay-image-chess--chess {
+    width: 71px;
+    left: 868px;
+    top: 103px;
+  }
+
+  .overlay-images--1 {
+    width: 1000px;
+    left: 145px;
+    top: 168px;
+  }
+
+  .overlay-images--2 {
+    width: 1000px;
+    left: 132px;
+    top: 161px;
+  }
+
+  .overlay-image-chess--chess2 {
+    width: 43px;
+    left: 983px;
+    top: 359px;
+  }
+
+  .overlay-image-chess--horse {
+    width: 107px;
+    left: 765px;
+    top: 325px;
+  }
+
+  .main-content {
+    padding: 80px 20px 200px 20px;
+  }
+
+  .section_stages {
+    padding: 0 20px 200px 20px;
+  }
+
+  .section_player {
+    padding: 0 20px 140px 20px;
+  }
+
+  .footer_content {
+    padding: 40px 20px;
+  }
+
+  .logo {
+    margin: 26px 0 0 110px;
+  }
+
+  .header__container {
+    margin: 0 0 0 110px;
+  }
+
+  .header_content-title {
+    font-size: 48px;
+  }
+
+  .title-line-center {
+    left: 80px;
+  }
+
+  .section_lecture--title {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  .lecture-text-wrap {
+    display: contents;
+  }
+
+  .lecture-text-wrap .part1,
+  .lecture-text-wrap .part2-group {
+    display: block;
+  }
+
+  .lecture-text-wrap .part1 span,
+  .lecture-text-wrap .part2-group span {
+    display: inline;
+  }
+
+  .part1 {
+    order: 0;
+  }
+
+  .section_lecture--title .mask-group {
+    order: 1;
+  }
+
+  .part2-group {
+    order: 2;
+    margin-top: 2px;
+  }
+
+  .section_lecture--text,
+  .lecture-text-wrap,
+  .part1,
+  .part2-group {
+    font-size: 32px;
+  }
+
+  .img-chess {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .mask-group.img-chess img {
+    object-fit: contain;
+  }
+
+  .section_lecture--title-second {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+  }
+
+  .second-picture {
+    left: 228px;
+    top: 4px;
+  }
+
+  .second-title {
+    width: 100%;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+
+  .section_lecture__table-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 0 60px;
+  }
+
+  .section_lecture__table-container::before {
+    display: none;
+  }
+
+  .schedule-table {
+    width: 100%;
+  }
+
+  .schedule-table tr {
+    display: block;
+  }
+
+  .schedule-table td {
+    display: block;
+    width: auto;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .schedule-table tr td:first-child {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 12px;
+    padding-top: 14px;
+  }
+
+  .schedule-table tr td:last-child {
+    padding-left: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  .schedule-table tr:first-child td {
+    padding-top: 0;
+  }
+
+  .schedule-table tr:last-child td:last-child {
+    border-bottom: none;
+  }
+
+  .schedule-table tr:nth-child(4) {
+    display: flex;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  .schedule-table tr:nth-child(4) td {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .schedule-table tr:nth-child(4) td:first-child {
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .value_table {
+    margin-bottom: 4px;
+  }
+
+  .name_table,
+  .value_table {
+    font-size: 16px;
+  }
+
+  .schedule-text {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 80px 20px 120px 20px;
+  }
+
+  .section_stages {
+    padding: 0 80px 120px 80px;
+  }
+
+  .section_stages__general-line {
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .section_stages__title {
+    font-size: 44px;
+  }
+
+  .section_stages__description {
+    height: auto;
+    margin: 4px 0 0 0;
+    font-size: 18px;
+  }
+
+  .section_stages__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .stage-card--1 span,
+  .stage-card--2 span,
+  .stage-card--3 span,
+  .stage-card--4 span,
+  .stage-card--5 span,
+  .stage-card--7 span {
+    width: auto;
+  }
+
+  .stage-card--1,
+  .stage-card--4 {
+    height: auto;
+  }
+
+  .stage-card--2,
+  .stage-card--5 {
+    min-height: auto;
+  }
+
+  .stage-card--3,
+  .stage-card--6 {
+    min-height: auto;
+  }
+
+  .stage-card--7 {
+    min-height: auto;
+  }
+
+  .stage-card__fly {
+    top: 77px;
+  }
+
+  .section_player {
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px 100px 80px;
+  }
+
+  .section_player__header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .section_player__title {
+    width: auto;
+    font-size: 44px;
+    margin: 0;
+  }
+
+  .participants-carousel {
+    max-width: 100%;
+  }
+
+  .participants-track {
+    gap: 15px;
+  }
+
+  .participant-card {
+    flex: 0 0 calc((100% - 15px) / 2);
+    padding: 0 10px;
+    height: auto;
+  }
+
+  .participant-card__avatar {
+    width: 240px;
+    height: 240px;
   }
 }
 
