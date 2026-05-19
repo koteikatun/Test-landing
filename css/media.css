@@ -365,14 +365,15 @@
   /* Overlay positions */
   .overlay-images {
     top: 372px;
-    left: calc((100% - 1365px) / 2 + 59px);
+    left: calc((100% - 1365px) / 2 + 100px);
   }
 
   .rotating-text {
-    top: calc(312px - (100% - 1025px) / 2 - 101px);
-    left: calc((100% - 1365px) / 2 + 590px);
-    width: calc((100% - 1025px) / 2 + 607px);
-    height: calc((100% - 1025px) / 2 + 760px);
+    top: calc(312px - (100% - 1025px) / 2 - 226px);
+    left: calc((100% - 1365px) / 2 + 595px);
+    width: calc((100% - 1025px) / 2 + 660px);
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
 
   .overlay-image-chess--queen {
